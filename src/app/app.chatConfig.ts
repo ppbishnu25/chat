@@ -4,6 +4,6 @@
     authDomain: "chat-80f4f.firebaseapp.com",
     databaseURL: "https://chat-80f4f.firebaseio.com",
     projectId: "chat-80f4f",
-    storageBucket: "",
+    storageBucket: "chat-80f4f.appspot.com",
     messagingSenderId: "1044596582951"
   };

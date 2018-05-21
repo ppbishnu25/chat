@@ -19,6 +19,8 @@ export class LoginPage {
 
   credentials = {} as UserDetails;
   constructor(public navCtrl: NavController, public navParams: NavParams, public authservice: AuthProvider) {
+    this.credentials.email = "bruce@ggktech.com";
+    this.credentials.password = "1234567";
   }
  
   ionViewDidLoad() {

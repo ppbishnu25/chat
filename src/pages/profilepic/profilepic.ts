@@ -22,24 +22,29 @@ export class ProfilepicPage {
   constructor(public navCtrl: NavController, public navParams: NavParams, public imgservice: ImghandlerProvider,
     public zone: NgZone, public userservice: UserProvider, public loadingCtrl: LoadingController) {
   }
- 
+
   ionViewDidLoad() {
   }
- 
+
   chooseimage() {
     let loader = this.loadingCtrl.create({
-      content: 'Please wait'
+      content: 'Please wait',
+      duration: 3000
     })
     loader.present();
     this.imgservice.uploadimage().then((uploadedurl: any) => {
       loader.dismiss();
       this.zone.run(() => {
+        console.log("imgurl "+this.updateproceed)
         this.imgurl = uploadedurl;
         this.moveon = false;
       })
-    })
+    }).catch((err) => {
+      alert(err);
+    });
+
   }
- 
+
   updateproceed() {
     let loader = this.loadingCtrl.create({
       content: 'Please wait'
@@ -55,10 +60,9 @@ export class ProfilepicPage {
       }
     })
   }
- 
+
   proceed() {
     this.navCtrl.setRoot('TabsPage');
   }
- 
 
 }

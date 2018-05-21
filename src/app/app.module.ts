@@ -10,6 +10,9 @@ import { MyApp } from './app.component';
 import { AuthProvider } from '../providers/auth/auth';
 import { UserProvider } from '../providers/user/user';
 import { ImghandlerProvider } from '../providers/imghandler/imghandler';
+import { File } from '@ionic-native/file';
+import { FileChooser } from '@ionic-native/file-chooser';
+import { FilePath } from '@ionic-native/file-path';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,9 @@ import { ImghandlerProvider } from '../providers/imghandler/imghandler';
   providers: [
     StatusBar,
     SplashScreen,
+    File,
+    FilePath,
+    FileChooser,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
     AngularFireAuth,

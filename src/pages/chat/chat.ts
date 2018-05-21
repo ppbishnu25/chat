@@ -21,5 +21,9 @@ export class ChatPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad ChatPage');
   }
+  
+  addbuddy() {
+    this.navCtrl.push('BuddiesPage');
+  }
 
 }
